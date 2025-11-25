@@ -31,3 +31,4 @@ D:\devops-handson\projectAPI\ApiB\ApiB\obj\Debug\net8.0\refint\ApiB.dll
 D:\devops-handson\projectAPI\ApiB\ApiB\obj\Debug\net8.0\ApiB.pdb
 D:\devops-handson\projectAPI\ApiB\ApiB\obj\Debug\net8.0\ApiB.genruntimeconfig.cache
 D:\devops-handson\projectAPI\ApiB\ApiB\obj\Debug\net8.0\ref\ApiB.dll
+D:\devops-handson\projectAPI\ApiB\ApiB\obj\Debug\net8.0\ApiB.sourcelink.json

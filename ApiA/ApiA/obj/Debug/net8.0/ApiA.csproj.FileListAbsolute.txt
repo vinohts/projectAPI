@@ -31,3 +31,4 @@ D:\devops-handson\projectAPI\ApiA\ApiA\obj\Debug\net8.0\refint\ApiA.dll
 D:\devops-handson\projectAPI\ApiA\ApiA\obj\Debug\net8.0\ApiA.pdb
 D:\devops-handson\projectAPI\ApiA\ApiA\obj\Debug\net8.0\ApiA.genruntimeconfig.cache
 D:\devops-handson\projectAPI\ApiA\ApiA\obj\Debug\net8.0\ref\ApiA.dll
+D:\devops-handson\projectAPI\ApiA\ApiA\obj\Debug\net8.0\ApiA.sourcelink.json

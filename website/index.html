@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>DevOps Practice Website</title>
+    <style>
+        body {
+            font-family: Arial;
+            margin: 40px;
+        }
+        .card {
+            padding: 20px;
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+        button {
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Simple Website to Test Your APIs</h1>
+
+    <!-- WEATHER API -->
+    <div class="card">
+        <h2>Weather API (ApiA)</h2>
+        <button onclick="getWeather()">Get Weather</button>
+        <pre id="weatherOutput"></pre>
+    </div>
+
+    <!-- CURRENCY CONVERTER API -->
+    <div class="card">
+        <h2>Currency Converter API (ApiB)</h2>
+
+        <label>Amount:</label>
+        <input type="number" id="amount" value="100"><br><br>
+
+        <label>From:</label>
+        <input type="text" id="from" value="USD"><br><br>
+
+        <label>To:</label>
+        <input type="text" id="to" value="INR"><br><br>
+
+        <button onclick="convertCurrency()">Convert Currency</button>
+        <pre id="currencyOutput"></pre>
+    </div>
+
+    <script>
+        function getWeather() {
+            fetch("http://localhost:5174/weather")
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById("weatherOutput").textContent = JSON.stringify(data, null, 4);
+                })
+                .catch(err => alert("Weather API error: " + err));
+        }
+
+        function convertCurrency() {
+            const amount = document.getElementById("amount").value;
+            const from = document.getElementById("from").value;
+            const to = document.getElementById("to").value;
+
+            const url = `http://localhost:5134/currency/convert?amount=${amount}&from=${from}&to=${to}`;
+
+            fetch(url)
+                .then(res => res.json())
+                .then(data => {
+                    document.getElementById("currencyOutput").textContent = JSON.stringify(data, null, 4);
+                })
+                .catch(err => alert("Currency API error: " + err));
+        }
+    </script>
+
+</body>
+</html>
